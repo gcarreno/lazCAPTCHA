@@ -110,6 +110,7 @@
         <Filename Value="forms/example.forms.main.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmMain"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Example.Forms.Main"/>
       </Unit1>
