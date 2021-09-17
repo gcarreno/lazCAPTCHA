@@ -1,0 +1,46 @@
+object frmMain: TfrmMain
+  Left = 332
+  Height = 152
+  Top = 250
+  Width = 374
+  BorderStyle = bsSingle
+  Caption = 'CAPTCHA Example'
+  ClientHeight = 152
+  ClientWidth = 374
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  object imgCAPTCHA: TImage
+    Left = 37
+    Height = 75
+    Top = 8
+    Width = 300
+    OnClick = imgCAPTCHAClick
+  end
+  object lblInfo: TLabel
+    Left = 9
+    Height = 15
+    Top = 88
+    Width = 357
+    Caption = 'To continue, type the characters you see in the picture'
+    ParentColor = False
+  end
+  object btnVerify: TButton
+    Left = 310
+    Height = 33
+    Top = 112
+    Width = 56
+    Anchors = [akTop, akRight]
+    AutoSize = True
+    Caption = '&Verify'
+    OnClick = btnVerifyClick
+    TabOrder = 0
+  end
+  object edtInput: TEdit
+    Left = 9
+    Height = 33
+    Top = 112
+    Width = 295
+    TabOrder = 1
+  end
+end
