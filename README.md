@@ -14,10 +14,10 @@ It's a fork from the Delphi version here: [Captcha Verification](https://github.
 
 **Wine**
 
-Sorry I don't have a windows machine to take a screeshot from.
+Sorry I don't have a windows machine to take a screenshot from.
 
 ![CAPTCHA Example](img/CAPTCHAExample-wine.png)
 
 ### Todo
 
-- [ ] Need to get that backgorund to be white.
+- [ ] Need to get that background to be white.
