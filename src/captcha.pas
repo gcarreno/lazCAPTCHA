@@ -149,6 +149,8 @@ begin
   FCAPTCHABitmap.Height:= 75;
   FCAPTCHABitmap.Canvas.Brush.Color:= clWhite;
   FCAPTCHABitmap.PixelFormat:= pf24bit;
+  FCAPTCHABitmap.Canvas.Pen.Color:= clWhite;
+  FCAPTCHABitmap.Canvas.FillRect(0,0,300,75);
   for i:= 1 to Length(FCAPTCHAString) do
     DrawLetter(FCAPTCHAString[i], Random(600) + 1, 25 * i - 15);
   DrawLines;
