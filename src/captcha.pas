@@ -45,6 +45,10 @@ type
 
 implementation
 
+uses
+  GraphType
+;
+
 { TCAPTCHA }
 
 function TCAPTCHA.GenerateCAPTCHAString: string;
@@ -68,35 +72,35 @@ begin
   SetLength(Result, NoOfChars);
 
   for i:= 1 to NoOfChars do
-    Result[i] := validChar[Random(Length(validChar)) + 1];
+    Result[i]:= validChar[Random(Length(validChar)) + 1];
 end;
 
 procedure TCAPTCHA.DrawLetter(ch: Char; angle, nextPos: Integer);
 var
-  logfont: TLogFont;
-  font: THandle;
+  logFont: TLogFont;
+  fontHandle: THandle;
 begin
-  logfont.lfheight := 40;
-  logfont.lfwidth := 20;
-  logfont.lfweight := 900;
+  logFont.lfheight:= 40;
+  logFont.lfwidth:= 20;
+  logFont.lfweight:= 900;
 
-  logfont.lfEscapement := angle;
-  logfont.lfcharset := 1;
-  logfont.lfoutprecision := OUT_TT_ONLY_PRECIS;
-  logfont.lfquality := DEFAULT_QUALITY;
-  logfont.lfpitchandfamily := FF_SWISS;
-  logfont.lfUnderline := 0;
-  logfont.lfStrikeOut := 0;
+  logFont.lfEscapement:= angle;
+  logFont.lfcharset:= 1;
+  logFont.lfoutprecision:= OUT_TT_ONLY_PRECIS;
+  logFont.lfquality:= DEFAULT_QUALITY;
+  logFont.lfpitchandfamily:= FF_SWISS;
+  logFont.lfUnderline:= 0;
+  logFont.lfStrikeOut:= 0;
 
-  font := CreateFontIndirect(logfont);
-  SelectObject(FCAPTCHABitmap.Canvas.Handle, font);
+  fontHandle:= CreateFontIndirect(logFont);
+  SelectObject(FCAPTCHABitmap.Canvas.Handle, fontHandle);
 
   SetTextColor(FCAPTCHABitmap.Canvas.Handle, rgb(0, 180, 0));
-  SetBKmode(FCAPTCHABitmap.Canvas.Handle, transparent);
+  SetBKmode(FCAPTCHABitmap.Canvas.Handle, TRANSPARENT);
 
   SetTextColor(FCAPTCHABitmap.Canvas.Handle, Random(MAXWORD));
   FCAPTCHABitmap.Canvas.TextOut(nextPos, FCAPTCHABitmap.Height div 3, ch);
-  DeleteObject(font);
+  DeleteObject(fontHandle);
 end;
 
 procedure TCAPTCHA.DrawLines(aLineCount: Integer);
@@ -131,9 +135,9 @@ function TCAPTCHA.Validate(const AValue: string;
   ACaseSensetive: Boolean): Boolean;
 begin
   if ACaseSensetive then
-    Result := AValue = FCaptchaString
+    Result:= AValue = FCaptchaString
   else
-    Result := SameText(AValue, FCaptchaString);
+    Result:= SameText(AValue, FCaptchaString);
 end;
 
 constructor TCAPTCHA.Create(ACharCase: TCharCases);
