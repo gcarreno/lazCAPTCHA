@@ -43,6 +43,8 @@ type
     TCharCases = set of TCharCase;
 
   const
+    cWidth = 300;
+    cHeight = 75;
     cCharCaseAll = [Lower, Upper, Number];
     cCharCaseLetter = [Lower, Upper];
 
@@ -145,12 +147,11 @@ begin
   FreeAndNil(FCaptchaBitmap);
   FCAPTCHAString:= GenerateCAPTCHAString;
   FCAPTCHABitmap:= TBitmap.Create;
-  FCAPTCHABitmap.Width:= 300;
-  FCAPTCHABitmap.Height:= 75;
-  FCAPTCHABitmap.Canvas.Brush.Color:= clWhite;
   FCAPTCHABitmap.PixelFormat:= pf24bit;
-  FCAPTCHABitmap.Canvas.Pen.Color:= clWhite;
-  FCAPTCHABitmap.Canvas.FillRect(0,0,300,75);
+  FCAPTCHABitmap.Width:= cWidth;
+  FCAPTCHABitmap.Height:= cHeight;
+  FCAPTCHABitmap.Canvas.Brush.Color:= clWhite;
+  FCAPTCHABitmap.Canvas.FillRect(0,0,cWidth,cHeight);
   for i:= 1 to Length(FCAPTCHAString) do
     DrawLetter(FCAPTCHAString[i], Random(600) + 1, 25 * i - 15);
   DrawLines;
