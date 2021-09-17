@@ -4,4 +4,4 @@ Captcha Verification (or Completely Automated Public Turing Test to tell Compute
 
 This is a Lazarus implementation that you can use in your own projects.
 
-It's a fork from tghe Delphi version here: [Captcha Verification](https://github.com/JensBorrisholt/Captcha-Verification) by [Jens Borrisholt](https://github.com/JensBorrisholt).
+It's a fork from the Delphi version here: [Captcha Verification](https://github.com/JensBorrisholt/Captcha-Verification) by [Jens Borrisholt](https://github.com/JensBorrisholt).
