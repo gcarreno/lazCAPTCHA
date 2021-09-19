@@ -10,17 +10,18 @@ It's a fork from the Delphi version here: [Captcha Verification](https://github.
 
 **Linux**
 
-![CAPTCHA Example](img/CAPTCHAExample-linux.png)
+![CAPTCHA Example Linux](img/CAPTCHAExample-linux.png)
 
 **Wine**
 
-![CAPTCHA Example](img/CAPTCHAExample-wine.png)
+![CAPTCHA Example Wine](img/CAPTCHAExample-wine.png)
 
 **Windows**
 
-![CAPTCHA Example](img/CAPTCHAExample-windows.png)
+![CAPTCHA Example Windows](img/CAPTCHAExample-windows.png)
 
 ### Todo
 
 - [x] ~~Need to get that background to be white~~.
 - [ ] Need to find out why optimization greater than 1 messes up the font size and rotation in Linux.
+- [ ] Need to make this into a Visual component like the one [WP](https://github.com/wp-xyz) made: [captcha_component](https://github.com/wp-xyz/captcha_component)
