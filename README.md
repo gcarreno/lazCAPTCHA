@@ -22,4 +22,5 @@ It's a fork from the Delphi version here: [Captcha Verification](https://github.
 
 ### Todo
 
-- [ ] Need to get that background to be white.
+- [x] ~~Need to get that background to be white~~.
+- [ ] Need to find out why optimization greater than 1 messes up the font size and rotation in Linux.
