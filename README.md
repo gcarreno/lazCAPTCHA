@@ -14,9 +14,11 @@ It's a fork from the Delphi version here: [Captcha Verification](https://github.
 
 **Wine**
 
-Sorry I don't have a windows machine to take a screenshot from.
-
 ![CAPTCHA Example](img/CAPTCHAExample-wine.png)
+
+**Windows**
+
+![CAPTCHA Example](img/CAPTCHAExample-windows.png)
 
 ### Todo
 

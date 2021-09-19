@@ -67,7 +67,7 @@ procedure TfrmMain.btnVerifyClick(Sender: TObject);
 begin
   if FCAPTCHA.Validate(edtInput.Text) then
   begin
-    ShowMessage('Validation Sucsess');
+    ShowMessage('Validation Success');
     FCAPTCHA.RefreshBitmap;
     imgCAPTCHA.Picture.Assign(FCAPTCHA.Image);
   end
