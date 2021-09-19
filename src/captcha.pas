@@ -105,15 +105,15 @@ var
   logFont: TLogFont;
   fontHandle: THandle;
 begin
-  logFont.lfheight:= 40;
-  logFont.lfwidth:= 20;
-  logFont.lfweight:= 900;
+  logFont.lfHeight:= 40;
+  logFont.lfWidth:= 20;
+  logFont.lfWeight:= 900;
 
   logFont.lfEscapement:= angle;
-  logFont.lfcharset:= 1;
-  logFont.lfoutprecision:= OUT_TT_ONLY_PRECIS;
-  logFont.lfquality:= DEFAULT_QUALITY;
-  logFont.lfpitchandfamily:= FF_SWISS;
+  logFont.lfCharSet:= 1;
+  logFont.lfOutPrecision:= OUT_TT_ONLY_PRECIS;
+  logFont.lfQuality:= DEFAULT_QUALITY;
+  logFont.lfPitchAndFamily:= FF_SWISS;
   logFont.lfUnderline:= 0;
   logFont.lfStrikeOut:= 0;
 
